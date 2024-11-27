@@ -1,36 +1,36 @@
 {
 	"schemaVersion": 1,
-	"id": "modid",
+	"id": "dirtslab",
 	"version": "${version}",
-	"name": "Example mod",
-	"description": "This is an example description! Tell everyone what your mod is about!",
+	"name": "Dirt Slab Mod",
+	"description": "Adds a dirt slab to the game",
 	"authors": [
-		"Me!"
+		"za3k"
 	],
 	"contact": {
-		"homepage": "https://fabricmc.net/",
-		"sources": "https://github.com/FabricMC/fabric-example-mod"
+		"homepage": "https://za3k.com/",
+		"sources": "https://github.com/za3k/dirt-slab-mod"
 	},
 	"license": "CC0-1.0",
 	"icon": "assets/modid/icon.png",
 	"environment": "*",
 	"entrypoints": {
 		"main": [
-			"com.example.ExampleMod"
+			"com.za3k.DirtSlabMod"
 		],
 		"client": [
-			"com.example.ExampleModClient"
+			"com.za3k.DirtSlabModClient"
 		]
 	},
 	"mixins": [
-		"modid.mixins.json",
+		"dirtslab.mixins.json",
 		{
-			"config": "modid.client.mixins.json",
+			"config": "dirtslab.client.mixins.json",
 			"environment": "client"
 		}
 	],
 	"depends": {
-		"fabricloader": ">=0.16.7",
+		"fabricloader": ">=0.16.9",
 		"minecraft": "~1.21.3",
 		"java": ">=21",
 		"fabric-api": "*"
