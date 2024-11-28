@@ -14,13 +14,15 @@ import net.minecraft.registry.RegistryKeys;
 import net.minecraft.sound.BlockSoundGroup;
 import net.minecraft.util.Identifier;
 
+import java.util.function.Function;
+
 
 public class ModBlocks {
-    public static Block register(AbstractBlock.Settings settings, String name, boolean shouldRegisterItem) {
+    public static Block register(Function<AbstractBlock.Settings, Block> factory, AbstractBlock.Settings settings, String name, boolean shouldRegisterItem) {
         Identifier id = Identifier.of(DirtSlabMod.MOD_ID, name);
         RegistryKey<Block> blockKey = RegistryKey.of(RegistryKeys.BLOCK, id);
 
-        SlabBlock block = new SlabBlock(settings.registryKey(blockKey));
+        Block block = factory.apply(settings.registryKey(blockKey));
 
         if (shouldRegisterItem)  {
             RegistryKey<Item> itemKey = RegistryKey.of(RegistryKeys.ITEM, id);
@@ -32,6 +34,7 @@ public class ModBlocks {
     }
 
     public static final Block DIRT_SLAB = register(
+            SlabBlock::new,
             AbstractBlock.Settings.create().sounds(BlockSoundGroup.GRAVEL)
                     .strength(0.5f, 0.5f),
             "dirt_slab",
