@@ -32,7 +32,8 @@ public class ModBlocks {
     }
 
     public static final Block DIRT_SLAB = register(
-            AbstractBlock.Settings.create().sounds(BlockSoundGroup.GRAVEL),
+            AbstractBlock.Settings.create().sounds(BlockSoundGroup.GRAVEL)
+                    .strength(0.5f, 0.5f),
             "dirt_slab",
             true
     );

@@ -1,9 +1,9 @@
-# Fabric Example Mod
+Dirt Slab is my first fabric mod. It adds a dirt slab (that's it)
 
-## Setup
+![](screenshot.png)
 
-For setup instructions please see the [fabric wiki page](https://fabricmc.net/wiki/tutorial:setup) that relates to the IDE that you are using.
+![](recipe.png)
 
-## License
-
-This template is available under the CC0 license. Feel free to learn from it and incorporate it in your own projects.
+Special thanks to:
+    - Fabric, especially the wonderful documentation folks
+    - Linguardium on Discord
