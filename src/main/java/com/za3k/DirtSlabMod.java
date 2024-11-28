@@ -19,6 +19,8 @@ public class DirtSlabMod implements ModInitializer {
 		// However, some things (like resources) may still be uninitialized.
 		// Proceed with mild caution.
 
-		LOGGER.info("[DirtSlab] Hello Fabric world from main!");
+		LOGGER.info("Loaded");
+
+		ModBlocks.initialize();
 	}
 }
