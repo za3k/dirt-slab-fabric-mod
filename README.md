@@ -1,5 +1,7 @@
 Dirt Slab is my first fabric mod. It adds a dirt slab (that's it)
 
+It was written by by [za3k](https://za3k.com/) as part of [hack-a-day](https://za3k.com/hackaday)
+
 ![](screenshot.png)
 
 ![](recipe.png)
